@@ -1,0 +1,47 @@
+.main {
+  margin-top: 65px;
+  margin-left: 290px;
+}
+
+h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+}
+
+.input-container {
+  width: 882px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-expences {
+  box-sizing: border-box;
+  width: 484px;
+  height: 58px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #000000;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+}
+
+.add-expence-button {
+  width: 370px;
+  height: 58px;
+  background: #0094ff;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #ffffff;
+  cursor: pointer;
+}

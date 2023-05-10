@@ -6,23 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expences tracker app</title>
     <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="styles.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <h1>Учёт расходов</h1>
-    <input
-      class="js-input-expence input-expence"
-      type="number"
-      placeholder="введите сумму траты"
-    />
+    <section class="main">
+      <h1>Учёт расходов</h1>
+      <div class="input-container">
+        <input
+          class="js-input-expences input-expences"
+          type="number"
+          placeholder="введите сумму затрат"
+        />
 
-    <button class="js-add-button add-button">Добавить</button>
+        <button class="js-add-expence-button add-expence-button">
+          Добавить
+        </button>
+      </div>
+    </section>
 
     <script src="index.js"></script>
   </body>
