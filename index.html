@@ -19,12 +19,22 @@
     <div class="main-container">
       <h1>Учёт расходов</h1>
       <div class="input-container">
-        <input
-          class="js-input-expences input-expences"
-          type="number"
-          placeholder="введите сумму затрат"
-        />
-
+        <div class="expences-and-category">
+          <input
+            class="js-input-expences input-expences"
+            type="number"
+            placeholder="введите сумму затрат"
+          />
+          <select class="js-category-selection category-selection">
+            <option hidden disabled selected>Выберите категорию</option>
+            <option>Еда</option>
+            <option>Кофе и рестораны</option>
+            <option>Покупки</option>
+            <option>Профессиональные услуги</option>
+            <option>Подарки</option>
+            <option>Транспорт</option>
+          </select>
+        </div>
         <button class="js-add-expence-button add-expence-button">
           Добавить
         </button>
@@ -34,11 +44,11 @@
           <p class="text">
             Всего:
             <span class="js-amount output"> 0 руб.</span>
-            <button class="js-changeLimit changeLimit"></button>
           </p>
           <p class="text">
             Лимит:
             <span class="js-limit output"> 10000 руб.</span>
+            <button class="js-changeLimit changeLimit"></button>
           </p>
           <p class="text">
             Статус:

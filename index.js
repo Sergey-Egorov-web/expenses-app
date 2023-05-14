@@ -11,11 +11,13 @@ const limitNode = document.querySelector(".js-limit");
 const statusNode = document.querySelector(".js-status");
 const clearExpencesNode = document.querySelector(".js-clear-expences-button");
 const ChangeLimitNode = document.querySelector(".js-changeLimit");
+const categorySelectionNode = document.querySelector(".js-category-selection");
 
 let expences = [];
 let expencesListHTML = "";
 let sum = 0;
 let limit = 5000;
+let categories = [];
 // вводим затраты
 
 renderLimit(limit);
@@ -25,12 +27,13 @@ addExpenceNode.addEventListener("click", function () {
   if (!expence) {
     return;
   }
+  category = getCategoryFromUser();
 
-  trackExpanse(expence); // добавляем трату в массив затрат
+  trackExpanse(expence, category); // добавляем трату в массив затрат
 
   clearInputFromUser(); // Очищаем поля ввода пользователем
 
-  renderHistory(expences); // Сохраняем список трат
+  renderHistory(expences, categories); // Сохраняем список трат
 
   sum = calculateExpences(expences); // считаем сумму затрат
 
@@ -44,7 +47,8 @@ addExpenceNode.addEventListener("click", function () {
 clearExpencesNode.addEventListener("click", function () {
   sum = 0;
   expences = [];
-  renderHistory(expences);
+  categories = [];
+  renderHistory(expences, category);
   renderSum(sum);
   renderStatus(sum);
 });
@@ -64,8 +68,14 @@ function getExpenceFromUser() {
   return expence;
 }
 
-function trackExpanse(expence) {
+function getCategoryFromUser() {
+  const category = categorySelectionNode.value;
+  return category;
+}
+
+function trackExpanse(expence, category) {
   expences.push(expence);
+  categories.push(category);
 }
 
 function clearInputFromUser() {
@@ -88,17 +98,21 @@ function renderLimit(limit) {
   limitNode.innerHTML = `<p>${limit} ${CURRENCY}</p>`;
 }
 
-function renderHistory(expences) {
+function renderHistory(expences, categories) {
   expencesListHTML = "";
-  expences.forEach((element) => {
-    expencesListHTML += `<li>${element} ${CURRENCY}</li>`;
-  });
-  historyNode.innerHTML = `<ol>${expencesListHTML}</ol>`;
+  // expences.forEach((element) => {
+  for (let i = 0; i < expences.length; i++) {
+    expencesListHTML += `<li>${expences[i]} ${CURRENCY}${categories[i]}</li>`;
+    console.log(expences[i]);
+  }
+  historyNode.innerHTML = `<ol>${expencesListHTML} </ol>`;
 }
 
 function renderStatus(sum) {
   if (sum > limit) {
-    statusNode.innerHTML = `<p>${STATUS_OUT_OF_LIMIT}</p>`;
+    statusNode.innerHTML = `<p>${STATUS_OUT_OF_LIMIT} (${
+      limit - sum
+    } ${CURRENCY})</p>`;
     statusNode.classList.add(STATUS_OUT_OF_LIMIT_CLASSNAME);
   } else {
     statusNode.innerHTML = `<p>${STATUS_IN_LIMIT}</p>`;

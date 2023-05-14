@@ -13,10 +13,16 @@ h1 {
 }
 
 .input-container {
-  width: 882px;
+  width: 900px;
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
+}
+
+.expences-and-category {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
 }
 
 .input-expences {
@@ -31,6 +37,20 @@ h1 {
   font-size: 32px;
   line-height: 39px;
   color: #000000;
+}
+
+.category-selection {
+  box-sizing: border-box;
+  width: 484px;
+  height: 58px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #000000;
 }
 
 .add-expence-button {
@@ -131,7 +151,7 @@ li {
   width: 62px;
   height: 62px;
   padding-left: 20px;
-  background: url(/recources/changeLimit.png);
+  background: url(../recources/changeLimit.png);
   background-position: 50% 0%;
   background-repeat: no-repeat;
   cursor: pointer;
