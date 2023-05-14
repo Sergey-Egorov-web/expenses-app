@@ -10,6 +10,7 @@ const amountNode = document.querySelector(".js-amount");
 const limitNode = document.querySelector(".js-limit");
 const statusNode = document.querySelector(".js-status");
 const clearExpencesNode = document.querySelector(".js-clear-expences-button");
+const ChangeLimitNode = document.querySelector(".js-changeLimit");
 
 let expences = [];
 let expencesListHTML = "";
@@ -45,6 +46,12 @@ clearExpencesNode.addEventListener("click", function () {
   expences = [];
   renderHistory(expences);
   renderSum(sum);
+  renderStatus(sum);
+});
+
+ChangeLimitNode.addEventListener("click", function () {
+  limit = prompt("Введите лимит на расходы", "");
+  renderLimit(limit); //  Выводим лимит
   renderStatus(sum);
 });
 

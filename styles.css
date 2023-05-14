@@ -126,3 +126,13 @@ li {
   line-height: 39px;
   color: #ffffff;
 }
+
+.changeLimit {
+  width: 62px;
+  height: 62px;
+  padding-left: 20px;
+  background: url(/recources/changeLimit.png);
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
