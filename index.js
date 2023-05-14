@@ -9,6 +9,7 @@ const historyNode = document.querySelector(".js-history-list");
 const amountNode = document.querySelector(".js-amount");
 const limitNode = document.querySelector(".js-limit");
 const statusNode = document.querySelector(".js-status");
+const clearExpencesNode = document.querySelector(".js-clear-expences-button");
 
 let expences = [];
 let expencesListHTML = "";
@@ -37,6 +38,14 @@ addExpenceNode.addEventListener("click", function () {
   renderLimit(limit); //  Выводим лимит
 
   renderStatus(sum); // Проверка выхода за лимит и отображение статуса
+});
+
+clearExpencesNode.addEventListener("click", function () {
+  sum = 0;
+  expences = [];
+  renderHistory(expences);
+  renderSum(sum);
+  renderStatus(sum);
 });
 
 function getExpenceFromUser() {

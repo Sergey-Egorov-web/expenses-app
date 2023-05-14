@@ -110,3 +110,19 @@ ol {
 li {
   list-style: decimal;
 }
+
+.clear-expence-button {
+  margin-top: 70px;
+  width: 484px;
+  height: 58px;
+  background: #ff0000;
+}
+
+.clear-expence-button-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #ffffff;
+}
