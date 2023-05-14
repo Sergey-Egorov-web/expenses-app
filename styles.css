@@ -1,4 +1,4 @@
-.main {
+.main-container {
   margin-top: 65px;
   margin-left: 290px;
 }
@@ -44,6 +44,43 @@ h1 {
   line-height: 39px;
   color: #ffffff;
   cursor: pointer;
+}
+
+.output-container {
+  width: auto;
+  margin-top: 51px;
+  display: flex;
+  column-gap: 200px;
+}
+.total {
+  padding-left: 25px;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+}
+.text {
+  padding-top: 13px;
+  display: flex;
+  font-weight: 700;
+}
+
+.output {
+  font-weight: 400;
+}
+
+.text-status {
+  margin-top: 35px;
+}
+
+.status {
+  font-weight: 400;
+  color: green;
+}
+
+.status-red {
+  color: red;
 }
 
 h2 {

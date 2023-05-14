@@ -16,7 +16,7 @@
     />
   </head>
   <body>
-    <section class="main">
+    <div class="main-container">
       <h1>Учёт расходов</h1>
       <div class="input-container">
         <input
@@ -29,11 +29,29 @@
           Добавить
         </button>
       </div>
-    </section>
-    <section class="history">
-      <h2>История:</h2>
-      <div class="js-history-list history-list"></div>
-    </section>
+      <div class="output-container">
+        <section class="total">
+          <p class="text">
+            Всего:
+            <span class="js-amount output"> 0 руб.</span>
+          </p>
+          <p class="text">
+            Лимит:
+            <span class="js-limit output"> 10000 руб.</span>
+          </p>
+          <p class="text text-status">
+            Статус:
+            <span class="js-status status"> Всё хорошо.</span>
+          </p>
+          <!-- <div class="js-amount amount"></div> -->
+        </section>
+        <section class="history">
+          <h2>История:</h2>
+          <div class="js-history-list history-list"></div>
+        </section>
+      </div>
+    </div>
+
     <script src="index.js"></script>
   </body>
 </html>
