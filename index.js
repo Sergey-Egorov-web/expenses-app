@@ -27,7 +27,16 @@ addExpenceNode.addEventListener("click", function () {
   if (!expence) {
     return;
   }
+
+  if (!expence) {
+    return;
+  }
   category = getCategoryFromUser();
+
+  if (!category) {
+    alert("Выберите категорию");
+    return;
+  }
 
   trackExpanse(expence, category); // добавляем трату в массив затрат
 
@@ -69,6 +78,9 @@ function getExpenceFromUser() {
 }
 
 function getCategoryFromUser() {
+  if (categorySelectionNode.value == "Выберите категорию") {
+    return null;
+  }
   const category = categorySelectionNode.value;
   return category;
 }

@@ -56,7 +56,7 @@
 
 @media (max-width: 1099px) {
   .input-container {
-    width: 600px;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
     row-gap: 20px;

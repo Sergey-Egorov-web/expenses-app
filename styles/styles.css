@@ -38,6 +38,7 @@ h1 {
 .changeLimit {
   width: 62px;
   height: 62px;
+  padding-bottom: 50px;
   padding-left: 20px;
   background: url("../recources/changeLimit.png");
   background-position: 50% 0%;

@@ -69,7 +69,7 @@ li {
 
 @media (max-width: 1099px) {
   .output-container {
-    width: 600px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
