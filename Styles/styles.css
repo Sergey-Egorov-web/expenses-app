@@ -1,0 +1,55 @@
+@import url(input.css);
+@import url(output.css);
+
+.main-container {
+  display: block;
+  width: 1200px;
+  margin: 65px auto 0 auto;
+  /* margin-left: 290px; */
+}
+
+h1 {
+  text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+}
+
+.clear-expence-button {
+  display: block;
+  width: 484px;
+  height: 58px;
+  margin: 70px auto 0 auto;
+  background: #ff0000;
+}
+
+.clear-expence-button-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #ffffff;
+}
+
+.changeLimit {
+  width: 62px;
+  height: 62px;
+  padding-left: 20px;
+  background: url("../recources/changeLimit.png");
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+@media (max-width: 1099px) {
+  .main-container {
+    display: block;
+    width: 900px;
+    margin: 65px auto 0 auto;
+    /* margin-left: 290px; */
+  }
+}

@@ -1,0 +1,84 @@
+.output-container {
+  width: 1100px;
+  margin: 51px auto;
+  display: flex;
+  column-gap: 50px;
+}
+.total {
+  width: 484px;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+}
+.text {
+  padding-top: 13px;
+  display: flex;
+  font-weight: 700;
+}
+
+.output {
+  font-weight: 400;
+}
+
+.text-status {
+  margin-top: 35px;
+}
+
+.status {
+  font-weight: 400;
+  color: green;
+}
+
+.status-red {
+  color: red;
+}
+
+h2 {
+  margin-bottom: 21px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+}
+
+.history {
+  width: 484px;
+}
+
+.history-list {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+}
+
+ol {
+  margin-left: 50px;
+  list-style: decimal;
+}
+
+li {
+  list-style: decimal;
+}
+
+@media (max-width: 1099px) {
+  .output-container {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
+  }
+
+  .status {
+    font-size: 22px;
+    line-height: 39px;
+    column-gap: 0;
+  }
+}
